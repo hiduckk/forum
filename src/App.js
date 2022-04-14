@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Nav.js';
+import{
+  Link,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  }from 'react-router-dom';
+import Boardmain from './board/Boardmain';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <h1 class="display-4">환영합니다.</h1>
+      <Route exact path='/about'>
+      <h2> about Site</h2>
+      <br />
+      <br />
+      <p>이곳은 test용 게시판입니다.</p>
+      </Route>
+      <Route exact path='/board'>
+      <Boardmain />
+      </Route>
+    </Router>
   );
 }
 

@@ -1,38 +1,127 @@
+*{
+    margin:0;
+    padding:0 10px;
+}
 .App {
-  text-align: center;
+    font-size: 16px;
+}
+.boardlist{
+    padding:20px;
+    width:100%;
+    border-top:2px solid black;
+    margin-top:20px;
+}
+.boardlist >div{
+    display: flex;
+}
+.boardlist >div.top{
+    border-bottom: 1px solid #999;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.boardlist >div >div{
+    text-align:center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.boardlist .top .title{
+    text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.baordlist >div{
+    display: flex;
 }
-
-.App-link {
-  color: #61dafb;
+.baordlist >div{
+    display: flex;
 }
+.boardlist .num{
+    width:10%
+}
+.boardlist .title{
+    width:60%;
+    text-align:left;
+    margin-left: 20px;
+}
+.boardlist .writer{
+    width:10%
+}
+.boardlist .date{
+    width:10%
+}
+.boardlist .count{
+    width:10%
+}
+.boardlist >div.bottom{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.boardlist .create{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.글쓰기{
+    display: flex;
+    flex-direction: column;
+}
+.글쓰기 button{
+ display: inline-block;
+ border: 1px solid black;
+ border-radius:4px;
+ min-width:30px; /*최소길이*/
+ margin-left: 10px;
+ padding:3px;
+ font-size:10px;
+}
+.글쓰기내용{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width:100%;
+    text-align:center;
+    /*tag자체도 가운데로 가고 태그안의 내용도 가운데정렬*/
+}
+.글쓰기내용 label{
+    margin-left:3px;
+    padding:0;
+}
+.글쓰기내용 input{
+    margin-left:3px;
+}
+.글쓰기내용 textarea{
+    width:520px;
+    height:100px;
+    margin-top:20px;
+}
+.bottom{
+    display: flex;
+    align-items: center;
+}
+.bottom .title:hover{
+    color:#00796b;
+    cursor:pointer;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.bottom .num{
+    font-size:0.8rem;
+}
+.글쓰기버튼{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+.content{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border:1px solid #ddd;
+    height:100px;
+    margin:10px;
+    margin-left:20px;
+    margin-right:50px;
+    padding:10px;
+}
+.bottom .date{
+    font-size:9px;
 }
